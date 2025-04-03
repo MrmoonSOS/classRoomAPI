@@ -28,7 +28,7 @@ public class Course {
     //creando relacion(1 a muchos) con asistencia
     @OneToMany(mappedBy = "course")//=Como es conocido esta tabla en la tabla asistencias
     @JsonManagedReference//la que tenga la one lleva jsonmanage
-    private List<Assistance> assistance;
+    private Assistance assistance;
 
     public Course() {
     }

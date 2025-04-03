@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.List;
+
 //completado
 @Entity
 public class Qualifications {
@@ -29,7 +31,7 @@ public class Qualifications {
     @ManyToOne
     @JoinColumn(name = "fk_subject", referencedColumnName = "id")
     @JsonBackReference//la que tenga la many lleva jsonback
-    private Subjects subject;
+    private Subjects subjects;
 
 
     public Qualifications() {
